@@ -132,7 +132,7 @@ nav a {
 
 .about-right img:hover {
 	 
-	transform: scale(200%);
+	transform: scale(120%);
 }
 #about h2 {
     font-weight: bold;
@@ -143,6 +143,7 @@ nav a {
 }
  
 /* Services Styles */
+ 
 .service {
 	 
 	padding: 50px;
@@ -298,9 +299,10 @@ footer {
 	text-align: center;
     color: #fff;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 748px) {
 	/* Header Styles */
 	.header {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
@@ -314,32 +316,34 @@ footer {
 	}
 
 	/* Home Styles */
-	.home {
+	#home {
 		padding: 50px 20px;
 	}
 
-	.home h1 {
-		font-size: 36px;
+	#home h1 {
+		font-size: 30px;
+		font-weight: bold;
 	}
-
-	.home-about {
-		flex-direction: column;
-		padding: 20px;
-	}
-
-	.home-about img {
-		flex-basis: 50%;
-	}
-
-	.home-about p {
-		flex-basis: 100%;
-	}
-
+   #home p{
+	    font-size: 22px;
+		font-weight: lighter;
+   }
 	/* Services Styles */
 	.services-title h2 {
 		font-size: 30px;
 	}
 
+	#about h3{
+        font-size: 12px;
+	}
+	#about p{
+		font-size: 12px;
+	}
+	.services-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
 	.service {
 		margin-bottom: 30px;
 	}
@@ -349,6 +353,7 @@ footer {
 		height: 150px;
 		object-fit: cover;
 		margin-bottom: 10px;
+		margin-left: 30%;
 	}
 
 	.service h3 {
@@ -361,6 +366,16 @@ footer {
 		flex-basis: 50%;
 		margin: 10px;
 	}
+   .paintings-container{
+	    display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+   }
+   .grid-basic{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+   }
 
 	/* Contact Styles */
 	form input[type="submit"] {
