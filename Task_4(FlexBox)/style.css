@@ -27,7 +27,7 @@ ul {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1600px;
   margin-left: 2%;
   margin-right: 2%;
    
@@ -139,6 +139,7 @@ ul {
   .header .container {
     flex-direction: column;
     padding-top: 20px;
+    padding-bottom:20px;
     text-align: center;
   }
 
@@ -150,5 +151,12 @@ ul {
     flex-direction: column;
     text-align: center;
     margin-left: 5%;
+  }
+  .nav  {
+    
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;
+    
   }
 }
