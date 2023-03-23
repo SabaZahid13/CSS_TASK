@@ -1,0 +1,64 @@
+//partials
+@import './reset';
+@import './variables';
+ 
+// functions are used to compute and return values
+@function weight($weight-name){
+    @return map-get($font_weights, $weight-name);
+}
+//mixins are used to define styles
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction:$direction;
+}
+@mixin theme($light-theme:true){
+   @if $light-theme {
+       background :lighten($primary-color, 100%);
+       color:darken($text-color , 100%);
+   }
+    
+}
+@mixin mobile{
+   @media (max-width:$mobile) {
+       @content;
+   }
+}
+
+body{
+    background: $primary-color ;
+    color: $text-color;
+    //font-weight: map-get($font_weights , bold);
+     
+}
+.main{
+    @include flexCenter(row);
+    width: 70% - 30%;
+    margin: 0 auto;
+    //.main_para
+    #{&}_para1{
+        //font-weight: map-get($font_weights , bold ); 
+
+        font-weight: weight(reg); 
+        &:hover{
+            color:aqua;
+        }
+
+    }
+    #{&}_para2{
+        @extend .main_para1;
+        &:hover{
+            color:accent-color;
+        }
+         
+
+    }
+    @include mobile{
+        flex-direction: row;
+    }
+}
+
+.light {
+    @include theme($light-theme :true);
+}
