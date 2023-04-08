@@ -80,8 +80,8 @@ nav a {
 .home-title h1 {
 	font-size: 48px;
 	margin-bottom: 20px;
-     font-weight: bold;
-	 position: relative;
+    font-weight: bold;
+	position: relative;
 	animation-name: slideIn;
 	animation-duration: 2s;
 	animation-delay: 0.5s;
@@ -231,13 +231,7 @@ nav a {
 	}
 }
 
-
-.service :hover img {
-  transform: rotate(360deg); /* rotate the image 360 degrees on hover */
-  opacity: 1;
-}
  
-
 .service h3 {
 	font-size: 24px;
 	margin-bottom: 10px;
@@ -300,7 +294,7 @@ nav a {
 	animation-name: slide-top;
 	animation-duration: 3s;
 	animation-delay: 0.1s;
-	animation-fill-mode:backwards; 
+	animation-fill-mode:forwards; 
 	animation-iteration-count: infinite;
 }
 .painting .img-bottom{
