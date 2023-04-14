@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+     <!--fonts and css-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>TODO APP</title>
+</head>
+<body>
+    <header>
+        <h1>Today</h1>
+        <input type="text" id="todo-input" placeholder="Enter task...">
+        <button id="todo-add-btn">Add Task</button>
+    </header>
+    <section id="todo-container">
+        <div id="todo-stats">
+            <div>
+                <h2>Completed</h2>
+                <p id="completed-tasks">0</p>
+            </div>
+            <div>
+                <h2>Pending</h2>
+                <p id="pending-tasks">0</p>
+            </div>
+            <div>
+                <h2>Total</h2>
+                <p id="total-tasks">0</p>
+            </div>
+        </div>
+        <ul id="todo-list"></ul>
+    </section>
+     
+    <script src="script.js"></script>
+</body>
+
+
+</html>
