@@ -50,7 +50,7 @@ exports.getSingleOrder = catchAsyncError(async (req, res, next) => {
   });
 })
 
-// get logged in user  Orders
+// get own  Orders
 exports.myOrders = catchAsyncError(async (req, res, next) => {
   const orders = await Order.find({ user: req.user._id });
 
@@ -122,7 +122,8 @@ exports.deleteOrder = catchAsyncError(async (req, res, next) => {
     return next(new ErrorHandler("Order not found with this Id", 404));
   }
 
-  await order.remove();
+  const orderId = req.params.id;
+  await order.deleteOne({ _id: orderId });
 
   res.status(200).json({
     success: true,
